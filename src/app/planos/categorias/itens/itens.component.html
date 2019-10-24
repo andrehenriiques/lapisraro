@@ -1,0 +1,20 @@
+<ul *ngFor="let item of itens">
+    <li>
+        {{ item.id }} {{ item.valor | currency: 'BRL'}} <button (click)="selectValores(item.valor ,1)"
+            class="btn btn-link">Select</button>
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of itens2">
+        {{ item.id }} {{ item.valor | currency: 'BRL' }} <button (click)="selectValores(item.valor ,2 )"
+            class="btn btn-link">Select</button>
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of itens3">
+        {{ item.id }} {{ item.valor | currency: 'BRL' }} <button (click)="selectValores(item.valor ,3)"
+            class="btn btn-link">Select</button>
+    </li>
+</ul>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header"> {{ categoria[0] }} </div>
+                <div class="card-body">
+                    <h5 class="card-title">Itens</h5>
+                    <p class="card-text">
+                        <app-itens [itens]="itens" (emitValores)="receiveValue($event,1)"></app-itens>
+                    </p>
+                </div>
+            </div>
+            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header"> {{ categoria[1] }} </div>
+                <div class="card-body">
+                    <h5 class="card-title">Itens</h5>
+                    <p class="card-text">
+                        <app-itens [itens2]="itens2" (emitValores2)="receiveValue($event,2)"></app-itens>
+                    </p>
+                </div>
+            </div>
+            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header"> {{ categoria[2] }} </div>
+                <div class="card-body">
+                    <h5 class="card-title">Itens</h5>
+                    <p class="card-text">
+                        <app-itens [itens3]="itens3" (emitValores3)="receiveValue($event,3)"></app-itens>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <app-resumo [receiveResumo]="outputValueCat" 
+                        [receiveResumo2]="outputValueCat2"
+                        [receiveResumo3]="outputValueCat3" 
+                        (deleteNumber)="excluirNumero($event,1)"
+                        (deleteNumber2)="excluirNumero($event,2)" 
+                        (deleteNumber3)="excluirNumero($event,3)"></app-resumo>
+        </div>
+    </div>
+</div>

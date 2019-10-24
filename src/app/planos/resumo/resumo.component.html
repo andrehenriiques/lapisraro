@@ -1,0 +1,11 @@
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    <div class="card-header" > Resumo </div>
+    <div class="card-body">
+        <h5 class="card-title">Itens</h5>
+        <p class="card-text" *ngIf="receiveResumo != 0" > Categoria 1: {{ receiveResumo | currency : 'BRL' }} <button class="btn btn-danger btn-sm" (click)="excluir(1)"><i class="fa fa-close"></i></button></p> 
+        <p class="card-text" *ngIf="receiveResumo2 != 0"> Categoria 2: {{ receiveResumo2 | currency : 'BRL' }} <button class="btn btn-danger btn-sm" (click)="excluir(2)"><i class="fa fa-close"></i></button></p>
+        <p class="card-text" *ngIf="receiveResumo3 != 0"> Categoria 3: {{ receiveResumo3 | currency : 'BRL' }} <button class="btn btn-danger btn-sm" (click)="excluir(3)"><i class="fa fa-close"></i></button></p>
+        <hr>
+        <p class="card-text" *ngIf="empty"> TOTAL {{ somarResumo | currency : 'BRL'}} </p>
+    </div>
+</div>

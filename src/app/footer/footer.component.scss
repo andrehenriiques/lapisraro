@@ -1,0 +1,19 @@
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212529;
+    position:relative;    
+    bottom:0;
+    width:100%;
+}
+
+hr{
+    background-color:#d2ae9c
+}
+
+.info{
+    padding: 10px;
+    color:#d2ae9c;
+}
